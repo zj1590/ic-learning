@@ -1,0 +1,19 @@
+# 1. 进入项目目录
+cd ~/ic-learning/week1
+
+# 2. 编译（生成可执行文件 and_sim）
+iverilog -o and_sim tb_and_gate.v and_gate.v
+
+# 3. 运行仿真（终端看结果）
+vvp and_sim
+
+# 4. 打开波形查看器（弹出GTKWave窗口）
+gtkwave and_gate.vcd &
+
+# 5. 回到上一级目录准备Git提交
+cd ~/ic-learning
+
+# 6. Git 提交与推送
+git add .
+git commit -m "finish week1: and gate and counter"
+git push
